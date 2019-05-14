@@ -123,7 +123,7 @@ Two "Input Transactions", because Richard's balance was spread over two addresse
 - Index 1, first Sender's address and its signature + (value = - 100)
 - Index 2, first Sender's address and the rest of its signature (value = 0)
 - Index 3, second Sender's address and its signature + (value = - 50)
-- Index 4. second Sender's address(value = 0)
+- Index 4. second Sender's address and the rest of its signature (value = 0)
 
 
 Richards balance is 0
@@ -136,7 +136,7 @@ Available Tokens:  0
 * The two sender addresses should never be used again! -> https://i.imgur.com/3oejD6v.jpg  ;-)
 
 
-Karens's balance is now distributed to 2 addresses
+Karen's balance is now distributed to 2 addresses
 ```
 $ node get_account_info.js karen
 Available Tokens:  1000
