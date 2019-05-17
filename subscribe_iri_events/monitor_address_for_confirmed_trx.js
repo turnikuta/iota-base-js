@@ -11,10 +11,14 @@ const PROVIDER = "https://nodes.devnet.iota.org:443";
 const iota = core.composeAPI({ provider: PROVIDER });
 
 // get address 
-const addr = process.argv[2];
-if (addr == undefined || !addr.match(/^[A-Z9]*$/)){
-  console.log("Please provide the address you want to monitor! (Trytes)");
+let addr = process.argv[2];
+if (addr == undefined || !addr.match(/^[A-Z9]*$/) || addr.length < 81){
+  console.log("Please provide the address you want to monitor! (81 Trytes)");
   process.exit();
+}
+// addr without checksum
+if (addr.length > 81) {
+  addr = addr.slice(0,81);
 }
 
 sock.subscribe(addr);
