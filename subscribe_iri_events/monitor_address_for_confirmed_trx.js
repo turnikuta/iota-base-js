@@ -10,14 +10,13 @@ sock.connect(SOCK_PROVIDER);
 const PROVIDER = "https://nodes.devnet.iota.org:443";
 const iota = core.composeAPI({ provider: PROVIDER });
 
-// get a address 
+// get address 
 const addr = process.argv[2];
 if (addr == undefined || !addr.match(/^[A-Z9]*$/)){
   console.log("Please provide the address you want to monitor! (Trytes)");
   process.exit();
 }
 
-//sock.subscribe('tx');
 sock.subscribe(addr);
 
 sock.on('message', msg => {
