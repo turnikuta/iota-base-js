@@ -1,0 +1,7 @@
+{
+  "provider": "https://nodes.devnet.iota.org:443",
+  "persistencePath":  "./leveldb",
+    "cdaTimeout": 900,
+    "multiUse": true,
+    "expectedAmount": 1000
+}  
