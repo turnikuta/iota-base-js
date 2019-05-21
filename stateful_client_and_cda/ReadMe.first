@@ -3,7 +3,7 @@ They are based on the official documentation which can be found at https://docs.
 
 Unfortunately the function sendToCDA() always aborts with the error message 'Insufficient balance'.
 
-I have reported an issue with this problem. 
+I have reported an issue with this problem (https://github.com/iotaledger/iota.js/issues/381)
 
 The following Scenario:
 
