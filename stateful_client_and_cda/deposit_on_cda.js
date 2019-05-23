@@ -48,8 +48,8 @@ verifyMagnetLink(magnetLink)
     // start attaching to the tangle
     account.startAttaching({ depth: 3, minWeightMagnitude: 9, delay: 30 * 1000 });
   })
-  .catch( error => console.log("generateAccount() failed! ", error) )
+  .catch( error => console.log("generateAccount() failed!\n", error.message) )
 })
-.catch( error => console.log("CDA Magnet Link is NOT vaild - ", error.message) )
+.catch( error => console.log("CDA is NOT valid!\n", error.message) )
 
 
