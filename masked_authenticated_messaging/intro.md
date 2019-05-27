@@ -24,7 +24,7 @@ Published data:
    { value: 18, timestamp: '5/27/2019, 3:53:05 PM' }
    { value: 26, timestamp: '5/27/2019, 3:53:20 PM' }
 ```
-Retrive data:
+Retrieve data:
 ```
 $ node simple_fetch_all.js public YXQFQOVIDRHPMZ9GGQEBNSRNOGEAXH9QQOCJWLXPIEDFVTWOYIXFPILDQKYIIIEBYLHGSZE9WVXVFUWNA
 { value: 19, timestamp: '5/27/2019, 3:52:50 PM' }
@@ -46,7 +46,7 @@ Published data:
    { value: 40, timestamp: '5/27/2019, 3:56:09 PM' }
    { value: 46, timestamp: '5/27/2019, 3:56:24 PM' }
 ```
-Retrive data:
+Retrieve data:
 ```
 $ node simple_fetch_all.js private RTDDXUOLSELENPSKFQOQPNXUJANBVKNHBIQVFNSLSCSGBYZKVJLAMUDHJWLXGEFMYVYUBSAUHNANRZQ9Z
 { value: 54, timestamp: '5/27/2019, 3:55:54 PM' }
@@ -67,7 +67,7 @@ Published data:
    { value: 76, timestamp: '5/27/2019, 4:00:32 PM' }
    { value: 51, timestamp: '5/27/2019, 4:00:47 PM' }
 ```
-Retrive data:
+Retrieve data:
 ```
 $ node simple_fetch_all.js restricted CPQMDIPNBK9KHOIVFLVMKJKYAFPBPXKNYPFXCSOWDMQRCILCAEFSEYIHPCZPLUKTJFPTVZESVADTQTFZU nobodyknows
 { value: 62, timestamp: '5/27/2019, 4:00:17 PM' }
