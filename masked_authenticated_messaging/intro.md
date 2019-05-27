@@ -8,7 +8,9 @@ The demo contains the following scripts:
 - **get_addr_from_root.js** - show the address for a given root (in mode 'private' or 'restricted')
 
 **Remark**
-I have chosen the prefix 'simple', because the Merkle Tree of the used channels consists only of a single node (the default behaviour of MAM).I believe that the current version of the MAM library does not support more complex Merkle Trees, because i never managed to fetch the data...
+
+- I have chosen the prefix 'simple', because the Merkle Tree of the used channels consists only of a single node (the default behaviour of MAM). I believe that the current version of the MAM library does not support more complex Merkle Trees, because i never managed to fetch the data...
+- The 'fetch'-Script shows 3 ways to retrieve data
 
 
 #### 1. Mode 'public'
@@ -78,7 +80,9 @@ NextRoot:  HTCKJMNDS9NTEBQHCPBXYQKYHRTNFLWHHNURHQE9PNWMIQRRI9ESEBOUJGTELDQTVBLZP
 
 
 #### 4. Miscellaneous
-If you want to find the MAM transactions in the Tangle Explorer (https://devnet.thetangle.org/), you can use the 'root' (Channel ID) only for the MAM mode 'public'. In the 'private' and'restricted' mode, the address is derived from the 'root'-address (`address = hash(root)`).
+If you want to find the MAM transactions with the Tangle Explorer (https://devnet.thetangle.org/), you can use the 'root' (Channel ID) only for the MAM mode 'public'. In the 'private' and'restricted' mode, the address is derived from the 'root'-address (`address = hash(root)`). 
+
+Get the address for a given 'root'
 
 ```
 $ node get_addr_from_root.js CPQMDIPNBK9KHOIVFLVMKJKYAFPBPXKNYPFXCSOWDMQRCILCAEFSEYIHPCZPLUKTJFPTVZESVADTQTFZU
