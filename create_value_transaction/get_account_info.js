@@ -28,11 +28,17 @@ const seed = utils.generateNamedSeed(name);
 
 // get the data of the account 
 //  - used addresses and their balances
-iota.getAccountData(seed, {})
-.then(accountData => {
-    const { inputs, balance } = accountData;
-    console.log("Available Tokens: ", balance);
-    for (let i in inputs){
-       console.log(inputs[i].keyIndex, inputs[i].address, inputs[i].balance);
+iota.getNewAddress(seed,{index: 0, checksum: false, returnAll: true })
+.then( addresses => {
+  iota.getBalances(addresses, 100)
+  .then( response => {
+    const sum = response.balances.reduce((a, b) => a + b, 0)
+    console.log("Available Tokens: ", sum);
+    for (var i = 0; i < response.balances.length; i++) {
+      if ( response.balances[i] > 0 ) {
+        console.log(i, addresses[i], response.balances[i]);
+      }
     }
+  });
 });
+
