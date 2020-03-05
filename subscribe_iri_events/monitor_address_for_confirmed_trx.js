@@ -1,14 +1,20 @@
 'use strict';
 
+/* 
+  Monitor a given address for confirmed transactions
+*/
+
 const core = require('@iota/core');
 const zmq = require('zeromq-stable');
 
+// iota network connect
+const PROVIDER = "https://nodes.devnet.iota.org:443";
+const iota = core.composeAPI({ provider: PROVIDER });
+
+// zmq socket provider
 const SOCK_PROVIDER = "tcp://zmq.devnet.iota.org:5556";
 const sock = zmq.socket('sub');
 sock.connect(SOCK_PROVIDER);
-
-const PROVIDER = "https://nodes.devnet.iota.org:443";
-const iota = core.composeAPI({ provider: PROVIDER });
 
 // get address 
 let addr = process.argv[2];
@@ -21,6 +27,7 @@ if (addr.length > 81) {
   addr = addr.slice(0,81);
 }
 
+// Event - Monitor a given address for a confirmed transaction
 sock.subscribe(addr);
 
 sock.on('message', msg => {
@@ -35,3 +42,4 @@ sock.on('message', msg => {
     })
   })
 })
+

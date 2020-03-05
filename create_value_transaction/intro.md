@@ -39,7 +39,7 @@ Available Tokens:  1000
 $ node get_account_info.js richard
 Available Tokens:  0
 ```
-#### 2. Transfer Tokens
+#### 3. Transfer Tokens
 
 **Example:** "Karen" sends 100 IOTA to "Richard"
 ```
@@ -58,7 +58,7 @@ One "Input Transaction" (with negative value) and three "Output Transactions":
 - Index 2, Sender's address and the rest of its signature (value = 0)
 - Index 3. Remainder address (value = 900)
 
-#### 3. Check Balances
+#### 4. Check Balances
 
 Once the transaction has been confirmed, you can check the balances.
 ```
@@ -75,7 +75,7 @@ Available Tokens:  100
 - Richard's new balance is stored on the first address (Index 0)
 
 
-#### 4. Miscellaneous 
+#### 5. Miscellaneous 
 
 The transfer script always generates a new receiver address. 
 
