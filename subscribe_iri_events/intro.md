@@ -1,4 +1,4 @@
-This little demo shows how to monitor events publish by an IRI node
+This little demo shows how to monitor events published by an IRI node
 
 The demo contains the following scripts:
 - **monitor_address_for_confirmed_trx.js** 
