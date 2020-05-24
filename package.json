@@ -10,14 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@iota/account": "^1.0.0-beta.14",
-    "@iota/cda": "^1.0.0-beta.12",
-    "@iota/converter": "^1.0.0-beta.12",
-    "@iota/core": "^1.0.0-beta.12",
-    "@iota/extract-json": "^1.0.0-beta.12",
-    "@iota/mam": "^0.7.2",
-    "@iota/persistence-adapter-level": "^1.0.0-beta.13",
-    "@iota/transaction-converter": "^1.0.0-beta.12",
+    "@iota/account": "^1.0.0-beta.29",
+    "@iota/cda": "^1.0.0-beta.23",
+    "@iota/converter": "^1.0.0-beta.23",
+    "@iota/core": "^1.0.0-beta.29",
+    "@iota/extract-json": "^1.0.0-beta.23",
+    "@iota/mam": "^0.7.3",
+    "@iota/persistence-adapter-level": "^1.0.0-beta.23",
+    "@iota/transaction-converter": "^1.0.0-beta.23",
     "zeromq-stable": "^5.2.1"
   }
 }
