@@ -7,7 +7,7 @@
 const Mam = require('@iota/mam');
 const { trytesToAscii } = require('@iota/converter')
 
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+const PROVIDER = "https://nodes.comnet.thetangle.org:443";
 
 const usage = () => {
   const shortHelp = 'Usage: node simple_fetch_all.js <channel-mode> <channel-id> [<secret>]\n' + 

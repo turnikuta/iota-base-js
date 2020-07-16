@@ -4,8 +4,8 @@
   Create and broadcast a value transaction
 */
 
-// Configure the IRI Node you want to connect to
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+// Configure the network you want to connect to
+const PROVIDER = "https://nodes.comnet.thetangle.org:443";
 
 // IOTA Libs
 const core = require('@iota/core');
@@ -49,7 +49,7 @@ const receiverSeed = utils.generateNamedSeed(receiver);
   const transferObject = [{
     'address': receiverAddress,
     'value': value,
-    'tag': 'TOKENS9FOR9YOU'
+    'tag': 'TURNIKUTA'
   }]
 
   //
@@ -68,9 +68,10 @@ const receiverSeed = utils.generateNamedSeed(receiver);
   // Step 3 - Select tips, Perform PoW & Broadcast
   //
   const DEPTH = 3; // Number of bundles to go back to determine the transactions for approval
-  const minWeightMagnitude = 9;   // minimum number of zeroes that a proof-of-work transaction hash
+  const minWeightMagnitude = 10;  // minimum number of zeroes that a proof-of-work transaction hash
                                   // must end with to be considered valid by full nodes
                                   // mainnet = 14
+                                  // comnet = 10
                                   // testnet = 9
   let transactions;
   try {

@@ -8,11 +8,15 @@ const core = require('@iota/core');
 const zmq = require('zeromq-stable');
 
 // iota network connect
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+const PROVIDER = "https://nodes.comnet.thetangle.org:443";
 const iota = core.composeAPI({ provider: PROVIDER });
 
-// zmq socket provider
-const SOCK_PROVIDER = "tcp://zmq.devnet.iota.org:5556";
+//
+// --> Please add your comnet node >>>here<<<
+//     The ZMQ Plugin musst be enabled!
+//
+//const SOCK_PROVIDER = "tcp://<your-zmq-comnet-node>:5556";
+const SOCK_PROVIDER = "tcp://iota63.nodes.omsiluli.de:5556";
 const sock = zmq.socket('sub');
 sock.connect(SOCK_PROVIDER);
 
@@ -30,6 +34,7 @@ if (addr.length > 81) {
 // Event - Monitor a given address for a confirmed transaction
 sock.subscribe(addr);
 
+console.log("ZMQ Node: ", SOCK_PROVIDER);
 sock.on('message', msg => {
   const data = msg.toString().split(' '); 
   // [0] = address

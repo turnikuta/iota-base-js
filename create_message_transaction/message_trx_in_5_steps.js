@@ -4,8 +4,8 @@
   Create and broadcast a message transaction in 5 steps
 */
 
-// Configure the IRI Node you want to connect to
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+// Configure the network you want to connect to
+const PROVIDER = "https://nodes.comnet.thetangle.org";
 
 // IOTA Libs
 const core = require('@iota/core');
@@ -41,7 +41,7 @@ const transferObject = [{
   'address': address,
   'value': 0,
   'message': messageTrytes,
-  'tag': 'TRX9IN9FIVE9STEPS'   // "TRX IN FIVE STEPS"
+  'tag': 'TURNIKUTA' 
 }];
 
 
@@ -87,9 +87,10 @@ const transferObject = [{
   //    * attachmentTimsetampLowerBound
   //    * attachmentTimestampUpperBound
 
-  const minWeightMagnitude = 9;   // minimum number of zeroes that a proof-of-work transaction hash 
+  const minWeightMagnitude = 10;  // minimum number of zeroes that a proof-of-work transaction hash 
                                   // must end with to be considered valid by full nodes
                                   // mainnet = 14
+                                  // comnet = 10
                                   // testnet = 9
   let attachedTrytes;
   try {

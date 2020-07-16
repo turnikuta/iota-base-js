@@ -13,7 +13,7 @@
 const Mam = require('@iota/mam');
 const { asciiToTrytes } = require('@iota/converter')
 
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+const PROVIDER = "https://nodes.comnet.thetangle.org:443";
 
 // Time interval (seconds) for the publishing of the data
 const timeInterval = 15;
@@ -27,9 +27,6 @@ const mode = 'restricted';
 let secret = 'nobodyknows';
 const sideKey = secret.toUpperCase().padEnd(81, '9');
 
-// Link to the MAM Explorer (can be used to fetch the data)
-const mamExplorerLink = `https://mam-explorer.firebaseapp.com/?provider=${encodeURIComponent(PROVIDER)}&mode=${mode}&key=${sideKey}&root=`
-
 // Initialize the state of the data stream 
 //   seed, Null value generates a random seed
 //   security, Null value defaults to 2
@@ -42,7 +39,6 @@ mamState = Mam.changeMode(mamState, mode, sideKey);
 const channelId = Mam.getRoot(mamState);
 
 console.log("The Channel ID:\n  ", channelId);
-console.log("You can fetch the messages in the MAM Explorer:\n  ", mamExplorerLink + channelId);
 console.log("Published data:");
 
 /*
@@ -59,8 +55,8 @@ const publish = async data => {
 
   // Attach the payload(transaction) to the tangle.
   const depth = 3;
-  const minWeightMagnitude = 9;
-  const trxTag = "DO9YOU9WANT9TO9TAG9THE9TRX";
+  const minWeightMagnitude = 10;
+  const trxTag = "TURNIKUTA";
   const trxObject = await Mam.attach(message.payload, message.address, depth, minWeightMagnitude, trxTag);
 
   // print the published data

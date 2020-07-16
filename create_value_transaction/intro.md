@@ -26,9 +26,9 @@ Address:  BOOLNPSJATRTZATOWIJZVJCZSYMMTWVIXKFHRTRNIAAZXDERY9SOIQYDYGKMCLNV9YFYVC
 
 #### 2. Deposit Tokens
 
-Use the IOTA  Faucet  https://faucet.devnet.iota.org/  and deposit 1K IOTA tokens on Karen's first address
+Use the IOTA  Faucet  https://faucet.comnet.einfachiota.de  and deposit 1K IOTA tokens on Karen's first address
 
-You can check the status of the transaction on https://devnet.thetangle.org
+You can check the status of the transaction on https://comnet.thetangle.org
 
 Once the transaction has been confirmed, you can check the balances.
 ```
