@@ -12,7 +12,7 @@
 const Mam = require('@iota/mam');
 const { asciiToTrytes } = require('@iota/converter')
 
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+const PROVIDER = "https://nodes.comnet.thetangle.org:443";
 
 // Time interval (seconds) for the publishing of the data
 const timeInterval = 15;
@@ -21,7 +21,7 @@ const timeInterval = 15;
 const mode = 'public';
 
 // Link to the MAM Explorer (can be used to fetch the data)
-const mamExplorerLink = `https://mam-explorer.firebaseapp.com/?provider=${encodeURIComponent(PROVIDER)}&mode=${mode}&root=`
+const mamExplorerLink = `https://comnet.thetangle.org/streams/`
 
 // Initialize the state of the data stream 
 //   seed, Null value generates a random seed
@@ -50,8 +50,8 @@ const publish = async data => {
 
   // Attach the payload(transaction) to the tangle.
   const depth = 3;
-  const minWeightMagnitude = 9;
-  const trxTag = "DO9YOU9WANT9TO9TAG9THE9TRX";
+  const minWeightMagnitude = 10;
+  const trxTag = "TURNIKUTA";
   const trxObject = await Mam.attach(message.payload, message.address, depth, minWeightMagnitude, trxTag);
 
   // only for the first message in the datastream print ...

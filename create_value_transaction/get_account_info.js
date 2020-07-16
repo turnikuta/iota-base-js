@@ -4,8 +4,8 @@
   Get the used addresses and their balances for the given account
 */
 
-// Configure the IRI Node you want to connect to
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+// Configure the network you want to connect to
+const PROVIDER = "https://nodes.comnet.thetangle.org";
 
 // IOTA Libs
 const core = require('@iota/core');
@@ -30,7 +30,7 @@ const seed = utils.generateNamedSeed(name);
 //  - used addresses and their balances
 iota.getNewAddress(seed,{index: 0, checksum: false, returnAll: true })
 .then( addresses => {
-  iota.getBalances(addresses, 100)
+  iota.getBalances(addresses)
   .then( response => {
     const sum = response.balances.reduce((a, b) => a + b, 0)
     console.log("Available Tokens: ", sum);

@@ -1,7 +1,7 @@
 "use strict";
 
-// Configure the IRI Node you want to connect to
-const PROVIDER = "https://nodes.devnet.iota.org:443";
+// Configure the network you want to connect to
+const PROVIDER = "https://nodes.comnet.thetangle.org";
 
 // IOTA Libs
 const core = require('@iota/core');
